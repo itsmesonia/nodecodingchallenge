@@ -29,7 +29,7 @@ The project also includes:
 - Returns an `uploadId` to track progress
 
 
-<img width="2394" height="1496" alt="Screenshot 2025-08-19 165504" src="https://github.com/user-attachments/assets/d63bd96e-b496-4bac-ad90-ed5bdad02bc3" />
+<img width="2400" height="1501" alt="Screenshot 2025-08-19 165906" src="https://github.com/user-attachments/assets/d775aef7-6f2d-413a-a725-452f38d1097e" />
 
 <img width="434" alt="Screenshot 2025-08-19 165727" src="https://github.com/user-attachments/assets/66e88a63-b984-453a-b5dd-56d8ca8da4e3" />
 
