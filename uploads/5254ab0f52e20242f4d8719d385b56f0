@@ -1,0 +1,6 @@
+name,email
+John Doe,john@example.com
+Jane Smith,invalid-email
+Alice Johnson,alice@gmail.com
+Bob Brown,bob@domain.com
+Charlie Adams,charlie_at_domain.com

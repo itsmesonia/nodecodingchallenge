@@ -1,0 +1,11 @@
+name,email
+John Doe,john@example.com
+Jane Smith,invalid-email
+Alice Johnson,alice@gmail.com
+Bob Brown,bob@domain.com
+Charlie Adams,charlie_at_domain.com
+David Stone,david@work.com
+Emily White,emily_at_work.com
+Frank Green,frank.green@example.com
+Grace Black,grace@nowhere
+Henry Ford,henry.ford@example.com
