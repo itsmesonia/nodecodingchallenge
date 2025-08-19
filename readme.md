@@ -28,6 +28,11 @@ The project also includes:
 - Accepts a `.csv` file with columns: `name,email`
 - Returns an `uploadId` to track progress
 
+
+<img width="2394" height="1496" alt="Screenshot 2025-08-19 165504" src="https://github.com/user-attachments/assets/d63bd96e-b496-4bac-ad90-ed5bdad02bc3" />
+
+<img width="434" alt="Screenshot 2025-08-19 165727" src="https://github.com/user-attachments/assets/66e88a63-b984-453a-b5dd-56d8ca8da4e3" />
+
 **Example request (PowerShell):**
 
 ```powershell
