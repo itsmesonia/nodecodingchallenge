@@ -80,7 +80,7 @@ Replace <uploadId> with the one you just got back from a post request.
 
 Example:
 
-http://localhost:3000/upload/a7f6c8c9-9c7e-4c1a-8d83-57a29c24f6b2
+http://localhost:3000/upload/f8a056e2-9c61-46d7-8a5c-fea24f563e02
 
 👉 Response should look like:
 
