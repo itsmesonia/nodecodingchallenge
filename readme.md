@@ -50,11 +50,11 @@ Value: pick a CSV file (e.g. your sample.csv)
 ```
 
 <p align="center">
-<img width="800" height="1501" alt="Screenshot 2025-08-19 165906" src="https://github.com/user-attachments/assets/d775aef7-6f2d-413a-a725-452f38d1097e" />
+<img width="800" height="1501" alt="postman response" src="https://github.com/user-attachments/assets/d775aef7-6f2d-413a-a725-452f38d1097e" />
 </p>
 
 <p align="center">
-<img width="400" alt="Screenshot 2025-08-19 165727" src="https://github.com/user-attachments/assets/66e88a63-b984-453a-b5dd-56d8ca8da4e3" />
+<img width="400" alt="new files in uploads folder" src="https://github.com/user-attachments/assets/66e88a63-b984-453a-b5dd-56d8ca8da4e3" />
 </p>
 
 _Screenshot: Uploading a CSV file and receiving `uploadId` response_
@@ -80,14 +80,38 @@ Replace <uploadId> with the one you just got back from a post request.
 
 Example:
 
-http://localhost:3000/upload/a7f6c8c9-9c7e-4c1a-8d83-57a29c24f6b2
+http://localhost:3000/upload/f8a056e2-9c61-46d7-8a5c-fea24f563e02
+
+👉 Response should look like:
+
+```
+{
+    "uploadId": "f8a056e2-9c61-46d7-8a5c-fea24f563e02",
+    "totalRecords": 10,
+    "processedRecords": 7,
+    "failedRecords": 3,
+    "details": [
+        {
+            "name": "Jane Smith",
+            "email": "invalid-email",
+            "error": "Invalid email format"
+        },
+        {
+            "name": "Charlie Adams",
+            "email": "charlie_at_domain.com",
+            "error": "Invalid email format"
+        },
+        {
+            "name": "Emily White",
+            "email": "emily_at_work.com",
+            "error": "Invalid email format"
+        }
+    ]
+}
+```
 
 <p align="center">
-  <img width="800" alt="Check status request in Postman" src="" />
-</p>
-
-<p align="center">
-  <img width="800" alt="Status final response" src="" />
+ <img width="800"  alt="Status final response" src="https://github.com/user-attachments/assets/84fc147d-d000-4db4-9b23-b59f50b4cfb8" />
 </p>
 
 _Screenshot: Polling `/status/:uploadId` in Postman — first shows progress, then final JSON result._
