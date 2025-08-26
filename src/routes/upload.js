@@ -10,14 +10,11 @@ import { v4 as uuidv4 } from 'uuid';
 import pLimit from 'p-limit';
 
 const router = express.Router();
-// ✅ Always resolve to top-level uploads folder
 const uploadPath = path.join(process.cwd(), 'uploads');
 const upload = multer({ dest: uploadPath });
 
-// In-memory status store
 const statusMap = new Map();
 
-// Upload endpoint
 router.post('/', upload.single('file'), async (req, res) => {
   if (!req.file) {
     return res.status(400).json({ error: 'No file uploaded' });
@@ -84,7 +81,6 @@ router.post('/', upload.single('file'), async (req, res) => {
   }
 });
 
-// Status endpoint
 router.get('/:uploadId', (req, res) => {
   const { uploadId } = req.params;
   if (!statusMap.has(uploadId)) {
