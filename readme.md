@@ -116,6 +116,49 @@ http://localhost:3000/upload/f8a056e2-9c61-46d7-8a5c-fea24f563e02
 
 _Screenshot: Polling `/status/:uploadId` in Postman — first shows progress, then final JSON result._
 
-```powershell
-curl.exe -X POST http://localhost:3000/upload -F "file=@sample.csv"
+# 🧪 Testing
+
+This project uses Jest as the test runner, and Supertest for API integration testing.
+
+### Unit Tests
+
+The challenge required unit tests for:
+
+### CSV File Parsing
+
+- Directly test the `parseCSV` utility to ensure rows are correctly streamed and parsed from the sample CSV file.
+
+### Async Email Validation
+
+- We test the `mockValidateEmail` service with valid and invalid emails to confirm asynchronous validation works as expected.
+
+### Error Handling
+
+We test API responses for missing files (`400 Bad Request`) and invalid upload IDs (`404 Not Found`).
+
+# Integration Tests
+
+For the Express API endpoints:
+
+``` POST /upload```
+- Verified behavior when no file is uploaded.
+- Verified uploading a valid CSV returns a unique uploadId.
+
+```GET /upload/:uploadId```
+- Verified unknown IDs return 404 Not Found.
+- Verified status endpoint returns processing progress and results.
+
+# Running Tests
+
+To run the full suite:
+
+```npm test```
+
+
+# Run a single test file:
+
+```
+npm test tests/parser.test.js
+npm test tests/validator.test.js
+npm test tests/upload.test.js
 ```
