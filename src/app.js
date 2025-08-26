@@ -5,17 +5,20 @@ import { logger } from './utils/logger.js';
 
 const app = express();
 
-// Rate limiting
+const RATE_LIMIT_WINDOW_MS = 1 * 60 * 1000; // 1 minute
+const RATE_LIMIT_MAX_REQUESTS = 10;
+const RATE_LIMIT_MESSAGE = {
+  error: 'Too many upload attempts, please try again later.',
+};
+
 const uploadLimiter = rateLimit({
-  windowMs: 1 * 60 * 1000,
-  max: 10,
-  message: { error: 'Too many upload attempts, please try again later.' },
+  windowMs: RATE_LIMIT_WINDOW_MS,
+  max: RATE_LIMIT_MAX_REQUESTS,
+  message: RATE_LIMIT_MESSAGE,
 });
 
-// Routes
 app.use('/upload', uploadLimiter, uploadRoutes);
 
-// Error handler
 app.use((err, req, res, next) => {
   logger.error(`Unexpected error: ${err.message}`);
   res.status(500).json({ error: 'Internal Server Error' });
