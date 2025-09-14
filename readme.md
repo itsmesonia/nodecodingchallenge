@@ -120,7 +120,7 @@ http://localhost:3000/upload/f8a056e2-9c61-46d7-8a5c-fea24f563e02
  <img width="800"  alt="Status final response" src="https://github.com/user-attachments/assets/84fc147d-d000-4db4-9b23-b59f50b4cfb8" />
 </p>
 
-_Screenshot: Polling `/status/:uploadId` in Postman — first shows progress, then final JSON result._
+_Screenshot: Polling `/upload/:uploadId` in Postman — first shows progress, then final JSON result._
 
 # 🧪 Testing
 
