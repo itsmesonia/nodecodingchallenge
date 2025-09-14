@@ -19,6 +19,12 @@ The project also includes:
 
 ---
 
+## Running the server
+
+start: `npm run start`
+
+nodemon: `npm run dev`
+
 ## 🚀 API Endpoints
 
 ### 1. Upload File
@@ -63,7 +69,7 @@ _Screenshot: Uploading a CSV file and receiving `uploadId` response_
 
 ### 2. Check Status
 
-**GET** `/status/:uploadId`
+**GET** `/upload/:uploadId`
 
 - Returns the current progress of the upload, or the final results once processing is complete.
 - If the `uploadId` is invalid, returns a `404`.
