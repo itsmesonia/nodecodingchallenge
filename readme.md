@@ -60,7 +60,7 @@ Value: pick a CSV file (e.g. your sample.csv)
 </p>
 
 <p align="center">
-<img width="400" alt="new files in uploads folder" src="https://github.com/user-attachments/assets/66e88a63-b984-453a-b5dd-56d8ca8da4e3" />
+<img width="400" alt="new files in uploads folder" src="https://github.com/user-attachments/assets/284e1189-7a20-4774-ac50-4b75db89309e" />
 </p>
 
 _Screenshot: Uploading a CSV file and receiving `uploadId` response_
